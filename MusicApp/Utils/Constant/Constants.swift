@@ -35,5 +35,21 @@ struct Constants {
         static let skip = "Skip"
         static let nextButtonImage = "chevron.right.circle.fill"
     }
+    
+    enum LoginView {
+        static let googleTitle = "Sign In with Google"
+        static let signIn = "Sign In"
+        static let googleImage = "g.circle.fill"
+        static let signUp = "Sign Up"
+        static let forgotPassword = "Forgot Password ?"
+        static let headLabel = "Let's sign in you!"
+        static let infoLabel = "Don't have an account?"
+    }
+    
+    enum ForgotPasswordView {
+        static let headLabel = "Forgot Password"
+        static let sumbit = "Sumbit"
+        static let infoLabel = "Already have an account?"
+    }
 }
 
