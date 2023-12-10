@@ -44,4 +44,8 @@ extension String {
         return result
     }
     
+    var asUrl: URL? {
+        return URL(string: self)
+    }
+    
 }
