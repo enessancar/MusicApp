@@ -11,6 +11,7 @@ import SnapKit
 protocol OnboardingViewDelegate {
     func skipButtonTapped()
     func nextSlideButtonTapped()
+    func scrollToSlideTapped(sender: UIGestureRecognizer)
 }
 
 final class OnboardingView: UIView {
@@ -52,11 +53,11 @@ final class OnboardingView: UIView {
     }()
     
     private let shape = CAShapeLayer()
-    private var currentPageIndex: CGFloat = .zero
-    private var fromValue: CGFloat = .zero
+    var currentPageIndex: CGFloat = .zero
+    var fromValue: CGFloat = .zero
     
-    private var pages: [UIView] = []
-    private var currentSlide = 0
+    var pages: [UIView] = []
+    var currentSlide = 0
     
     private lazy var nextButton: UIView = {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapNextSlide))
@@ -86,6 +87,10 @@ final class OnboardingView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         sliderData = viewModel.sliderData
+        
+        setupCollectionView()
+        setupControl()
+        setupShape()
     }
     
     required init?(coder: NSCoder) {
@@ -140,7 +145,6 @@ final class OnboardingView: UIView {
         containerStackView.addArrangedSubview(nextButton)
         containerStackView.addArrangedSubview(pagerStack)
         
-        
         skipButton.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(10)
             make.trailing.equalToSuperview().offset(-10)
@@ -168,5 +172,8 @@ extension OnboardingView {
     @objc private func didTapNextSlide() {
         delegate?.nextSlideButtonTapped()
     }
+    
+    @objc func scrollToSlide(sender: UIGestureRecognizer){
+        delegate?.scrollToSlideTapped(sender: sender)
+    }
 }
-
