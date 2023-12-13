@@ -22,11 +22,12 @@ final class LoginVC: UIViewController {
     
     private func setupLoginView() {
         view.addSubview(loginView)
-        loginView.delegate = self
         
         loginView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+        
+        loginView.delegate = self
     }
 }
 

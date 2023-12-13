@@ -66,7 +66,7 @@ final class HomeViewModel: HomeViewModelProtocol {
     func getPopularSongs(playlistURL: String) {
         delegate?.showProgressView()
         manager.getRadioPlaylist(playlistURL: playlistURL) { data in
-            self.radioResponse = data
+            self.popularSongsResponse = data
             self.delegate?.updateUI()
             self.delegate?.dismissProgressView()
             
