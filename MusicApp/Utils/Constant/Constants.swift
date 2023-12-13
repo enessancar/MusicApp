@@ -51,5 +51,39 @@ struct Constants {
         static let sumbit = "Sumbit"
         static let infoLabel = "Already have an account?"
     }
+    
+    enum HomeView {
+        static let discover = "Discover new music"
+        static let browse = "Browse"
+        static let genres = "Genres"
+        static let explore = "Explore"
+        static let popularSongs = "Popular Songs"
+    }
+    
+    enum CreatePlaylistView {
+        static let title = "Create a New Playlist"
+        static let textField = "Playlist name..."
+        static let create = "Create"
+        static let cancel = "Cancel"
+    }
+    
+    enum PlayerView {
+        static let volumeUp = "speaker.wave.2.fill"
+        static let volumeDown = "speaker.fill"
+        static let forward = "goforward.5"
+        static let play = "play.circle.fill"
+        static let rewind = "gobackward.5"
+        static let heart = "heart"
+        static let addToPlaylist = "text.badge.plus"
+        static let noSong = "x.circle"
+    }
 }
 
+enum SFSymbols {
+    static let music = "music.note.list"
+    static let play = "play.fill"
+    static let person = "person.crop.square"
+    static let plus = "plus"
+    static let createButton = "checkmark.circle"
+    static let cancelButton = "x.circle"
+}

@@ -28,6 +28,7 @@ final class CustomTextField: UITextField {
         textColor                 = .label
         tintColor                 = .label
         textAlignment             = .left
+        layer.cornerRadius        = 8 
         
         adjustsFontSizeToFitWidth = true
         minimumFontSize           = 12
@@ -60,7 +61,6 @@ final class CustomTextField: UITextField {
             
             rightViewMode = .always
             rightView = rightButton
-            
         }
     }
     
