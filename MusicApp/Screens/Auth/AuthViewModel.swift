@@ -5,7 +5,8 @@
 //  Created by Enes Sancar on 1.12.2023.
 //
 
-import FirebaseAuth
+import UIKit
+import FirebaseAuth 
 
 final class AuthViewModel {
     

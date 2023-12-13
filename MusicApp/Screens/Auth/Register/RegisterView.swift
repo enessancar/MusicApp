@@ -106,6 +106,7 @@ final class RegisterView: UIView {
     
     private func configureStackView() {
         addSubview(stackView)
+        stackView.axis = .horizontal
         
         stackView.addArrangedSubview(infoLabel)
         stackView.addArrangedSubview(signInButton)
